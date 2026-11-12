@@ -11,13 +11,24 @@
   --concert-columns: 1.2fr 1.5fr 1fr; /* relative widths of date / event / location */
   --concert-gap: 24px;         /* spacing between the three elements */
 }
+/* ============================================
+   CUSTOM FONT
+   Put geneva.woff in assets/fonts/
+   ============================================ */
+@font-face {
+  font-family: "Geneva";
+  src: url("assets/css/fonts/Geneva.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Geneva, Georgia, "Times New Roman", serif;
+  font-family: "Geneva", Geneva, Georgia, "Times New Roman", serif;
   color: var(--text-color);
   line-height: 1.6;
 }
