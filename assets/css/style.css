@@ -17,7 +17,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Geneva, Georgia, "Times New Roman", serif;
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -30,8 +30,22 @@ body {
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
+  
 }
-
+/* Keep the image centered and covering the screen at every size:
+   the img element scales up (never down below full coverage),
+   staying anchored to the center of the screen. */
+.background img {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
 /* ---------- Content box ---------- */
 .content-box {
   width: var(--content-width);
@@ -52,8 +66,9 @@ body {
 
 /* ---------- Title ---------- */
 h1.site-title {
-  margin-top: 150px;
-  font-size: 3rem;
+  margin-top: 80px;
+  margin-bottom:50px;
+  font-size: 3.5rem;
   letter-spacing: 0.15em;
   font-weight: 700;
 }
@@ -109,7 +124,6 @@ section p {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 ratio */
-  margin-top: 60px;
 }
 
 .video-wrapper iframe {
