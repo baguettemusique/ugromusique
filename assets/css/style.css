@@ -17,7 +17,8 @@
    ============================================ */
 @font-face {
   font-family: "Geneva";
-  src: url("assets/css/fonts/Geneva.woff") format("woff");
+  src: url("assets/css/fonts/Geneva.woff") format("woff"),
+       url("assets/css/fonts/Geneva.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
